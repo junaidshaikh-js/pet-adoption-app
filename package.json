@@ -1,0 +1,33 @@
+{
+  "name": "pet-adoption-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "dev": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junaidshaikh-js/pet-adoption-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junaidshaikh-js/pet-adoption-app/issues"
+  },
+  "homepage": "https://github.com/junaidshaikh-js/pet-adoption-app#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/preset-react": "^7.12.13",
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "parcel": "^1.12.3",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
