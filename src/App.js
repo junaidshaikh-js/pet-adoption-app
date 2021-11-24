@@ -1,13 +1,12 @@
 import ReactDOM from "react-dom";
 import Pet from "./Pet";
+import SearchParams from "./SearchParams";
 
 const App = () => {
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <h1>Adopt Me!</h1>
-      <Pet name="Luna" animal="Dog" breed="Havanese" />
-      <Pet name="Luna" animal="Dog" breed="Havanese" />
-      <Pet name="Luna" animal="Dog" breed="Havanese" />
+      <SearchParams />
     </div>
   );
 };
