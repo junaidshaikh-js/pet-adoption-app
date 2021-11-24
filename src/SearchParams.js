@@ -14,7 +14,6 @@ const SearchParams = () => {
             placeholder="Location"
             onChange={(e) => setLocation(e.target.value)}
           />
-          ;
         </label>
         <button type="submit">Submit</button>
       </form>
