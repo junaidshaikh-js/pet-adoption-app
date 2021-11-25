@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Pet from "./Pet";
 
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 
@@ -7,7 +8,21 @@ const SearchParams = () => {
   const [animal, setAnimal] = useState("");
   const [breed, setBreed] = useState("");
   const [disabled, setDisabled] = useState(true);
+  const [pets, setPets] = useState([]);
   const breeds = [];
+
+  useEffect(() => {
+    requestPets();
+  }, []);
+
+  async function requestPets() {
+    const res = await fetch(
+      `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
+    );
+    const json = await res.json();
+
+    setPets(json.pets);
+  }
 
   return (
     <div className="search-params">
@@ -31,11 +46,15 @@ const SearchParams = () => {
               setAnimal(e.target.value);
               setDisabled(false);
             }}
-            onBlue={(e) => setAnimal(e.target.value)}
+            onBlur={(e) => setAnimal(e.target.value)}
           >
             <option />
             {ANIMALS.map((animal) => {
-              return <option value={animal}>{animal}</option>;
+              return (
+                <option value={animal} key={animal}>
+                  {animal}
+                </option>
+              );
             })}
           </select>
         </label>
@@ -44,19 +63,34 @@ const SearchParams = () => {
           Breed
           <select
             id="breed"
-            value={animal}
+            value={breed}
             onChange={(e) => setBreed(e.target.value)}
-            onBlue={(e) => setBreed(e.target.value)}
+            onBlur={(e) => setBreed(e.target.value)}
             disabled={disabled}
           >
             <option />
             {breeds.map((breed) => {
-              return <option value={breed}>{breed}</option>;
+              return (
+                <option value={breed} key={breed}>
+                  {breed}
+                </option>
+              );
             })}
           </select>
         </label>
         <button type="submit">Submit</button>
       </form>
+
+      {pets.map((pet) => {
+        return (
+          <Pet
+            name={pet.name}
+            animal={pet.animal}
+            breed={pet.breed}
+            key={pet.id}
+          />
+        );
+      })}
     </div>
   );
 };
