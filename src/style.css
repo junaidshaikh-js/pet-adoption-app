@@ -144,19 +144,20 @@ header {
 
 .carousel {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 400px;
   margin-top: 8px;
 }
 
 .carousel > img {
   max-width: 45%;
   max-height: 400px;
+  border-radius: 10px;
 }
 
 .carousel-smaller {
-  width: 50%;
+  margin-top: 2rem;
 }
 
 .carousel-smaller > img {

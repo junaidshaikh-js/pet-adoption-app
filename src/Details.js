@@ -1,6 +1,8 @@
 import { Component } from "react";
 import { withRouter } from "react-router-dom";
 
+import Carousel from "./Carousel";
+
 class Details extends Component {
   state = { loading: true };
 
@@ -16,7 +18,8 @@ class Details extends Component {
   }
 
   render() {
-    const { name, animal, breed, city, state, description } = this.state;
+    const { name, animal, breed, city, state, description, images } =
+      this.state;
 
     if (this.state.loading) {
       return <div className="lds-dual-ring"></div>;
@@ -24,6 +27,7 @@ class Details extends Component {
 
     return (
       <div className="details">
+        <Carousel images={images} />
         <div>
           <h1>{name}</h1>
           <h2>{`${animal} — ${breed} — ${city}, ${state}`}</h2>
