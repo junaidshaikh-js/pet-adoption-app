@@ -19,7 +19,7 @@ class Details extends Component {
     const { name, animal, breed, city, state, description } = this.state;
 
     if (this.state.loading) {
-      return <h2>Loading...</h2>;
+      return <div className="lds-dual-ring"></div>;
     }
 
     return (
