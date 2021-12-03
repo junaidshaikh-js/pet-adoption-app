@@ -5,10 +5,6 @@ class Carousel extends Component {
     active: 0,
   };
 
-  //   static defaultProps = {
-  //     images: ["http://pets-images.dev-apis.com/pets/none.jpg"],
-  //   };
-
   render() {
     const { active } = this.state;
     const { images } = this.props;
