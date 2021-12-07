@@ -36750,4 +36750,6 @@ var App = function App() {
 _reactDom.default.render( /*#__PURE__*/(0, _jsxRuntime.jsx)(_react.default.StrictMode, {
   children: /*#__PURE__*/(0, _jsxRuntime.jsx)(App, {})
 }), document.getElementById("root"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./SearchParams":"SearchParams.js","./Details":"Details.js","./ThemeContext":"ThemeContext.js","react/jsx-runtime":"../node_modules/react/jsx-runtime.js"}]
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","./SearchParams":"SearchParams.js","./Details":"Details.js","./ThemeContext":"ThemeContext.js","react/jsx-runtime":"../node_modules/react/jsx-runtime.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+},{}]
